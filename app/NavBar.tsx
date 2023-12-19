@@ -4,7 +4,7 @@ import Link from 'next/link';
 const NavBar = () => {
   return (
     <div className="navbar">
-      <Link className="navbar-start ml-5" href="/">
+      <Link className="navbar-start ml-5 text-2xl" href="/">
         Juno Church of Christ
       </Link>
       <div className="navbar-end mr-5">
