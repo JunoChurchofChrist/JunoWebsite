@@ -8,13 +8,13 @@ const NavBar = () => {
         Juno Church of Christ
       </Link>
       <div className="navbar-end mr-5">
-        <Link className="p-3" href="/about">
+        <Link className="mx-2 p-2 border rounded" href="/about">
           About
         </Link>
-        <Link className="p-3" href="/connect">
+        <Link className="mx-2 p-2 border rounded" href="/connect">
           Connect
         </Link>
-        <Link className="p-3" href="/media">
+        <Link className="mx-2 p-2 border rounded" href="/media">
           Media
         </Link>
       </div>
