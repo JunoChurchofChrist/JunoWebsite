@@ -5,11 +5,17 @@ A redesign of the Juno Church of Christs Website useing next.js
 ## Branch Naming Convention
 
 branches should ideally follow the following naming conventions:
+```
 - features: feature/JW-{ticket number}-{general summary of work being completed}
     - ex: feature/JW-1-Facebook-Integration
+```
+```
 -bugfixes: bugfix/{general description of bug being fixed}
     - ex: bugfix/Facebook-Integration-Bugfix
+```
+```
 -hotfixes: similar to bugfixes, hotfix/{general description of hotfix}
+```
 
 ## Deploy on Vercel
 
