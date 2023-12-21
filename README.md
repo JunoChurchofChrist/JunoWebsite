@@ -6,7 +6,7 @@ A redesign of the Juno Church of Christs Website useing next.js
 
 branches should ideally follow the following naming conventions:
 ```
--features: feature/JW-{ticket number}-{general summary of work being completed}
+-features: feature/JW-{ticket number}-{summary of work being completed}
     - ex: feature/JW-1-Facebook-Integration
 ```
 ```
