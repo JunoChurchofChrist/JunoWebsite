@@ -1,19 +1,19 @@
 import React from 'react';
-import CenterText from '../components/CenterText';
+import CenterText from '@/app/components/CenterText';
 
-const AboutPage = () => {
+const ServicesPage = () => {
   return (
-    <div>
+    <>
       <CenterText className="box-border h-60 text-lg mx-5">
         Anyone is welcome to visit our services and events here at Juno. We hope
         you'll find the environment welcoming and friendly.
       </CenterText>
-      <CenterText className="text-2xl justify-around">
-        <CenterText className="flex-col">
+      <CenterText className="text-2xl">
+        <CenterText className="">
           <h2>Juno Church of Christ</h2>
           <p>4600 US-412 Lexington, TN. 38340</p>
         </CenterText>
-        <CenterText className="flex-col items-stretch">
+        <CenterText className="">
           <h2 className="font-bold my-2">Sundays</h2>
           <p>9:30a - Bible Class</p>
           <p>10:30a - Morning Worship</p>
@@ -22,8 +22,8 @@ const AboutPage = () => {
           <p>6:30p - Bible Classes</p>
         </CenterText>
       </CenterText>
-    </div>
+    </>
   );
 };
 
-export default AboutPage;
+export default ServicesPage;

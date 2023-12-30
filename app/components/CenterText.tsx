@@ -7,7 +7,7 @@ interface Props {
 
 const CenterText = ({ children, className }: Props) => {
   return (
-    <div className={'flex justify-center items-center' + className}>
+    <div className={'flex justify-center items-center ' + className}>
       {children}
     </div>
   );

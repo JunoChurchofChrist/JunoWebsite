@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Dropdown from './components/Dropdown';
 
 const NavBar = () => {
   return (
@@ -8,9 +9,10 @@ const NavBar = () => {
         Juno Church of Christ
       </Link>
       <div className="navbar-end mr-5">
-        <Link className="mx-2 p-2 border rounded" href="/about">
+        <div className="mx-2 p-2 border rounded hover:cursor-pointer">
           About
-        </Link>
+          <Dropdown />
+        </div>
         <Link className="mx-2 p-2 border rounded" href="/connect">
           Connect
         </Link>
