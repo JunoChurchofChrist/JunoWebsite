@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import About from './About';
 
 const NavBar = () => {
   return (
@@ -8,9 +9,7 @@ const NavBar = () => {
         Juno Church of Christ
       </Link>
       <div className="navbar-end mr-5">
-        <Link className="mx-2 p-2 border rounded" href="/about">
-          About
-        </Link>
+        <About classname="mx-2 border rounded" />
         <Link className="mx-2 p-2 border rounded" href="/connect">
           Connect
         </Link>
