@@ -1,7 +1,7 @@
 import React from 'react';
 import Minister from './Minister';
-import dakota from '@/public/img/dakota.jpeg';
-import isaiah from '@/public/img/isaiah.jpeg';
+import dakota from '@/public/img/ministers/dakota.jpeg';
+import isaiah from '@/public/img/ministers/isaiah.jpeg';
 
 const MinisterPage = () => {
   return (
