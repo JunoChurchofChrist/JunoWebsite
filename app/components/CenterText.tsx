@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
 
-interface Props {
+interface CenterTextProps {
   children: ReactNode;
   className?: string;
 }
 
-const CenterText = ({ children, className }: Props) => {
+const CenterText = ({ children, className }: CenterTextProps) => {
   return (
     <div className={'flex justify-center items-center ' + className}>
       {children}

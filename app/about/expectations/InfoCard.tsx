@@ -3,14 +3,14 @@ import Image from 'next/image';
 import CenterText from '@/app/components/CenterText';
 import { StaticImageData } from 'next/image';
 
-interface Props {
+interface InfoCardProps {
   title: string;
   imgData: StaticImageData;
   className?: string;
   children?: ReactNode;
 }
 
-const InfoCard = ({ title, imgData, className, children }: Props) => {
+const InfoCard = ({ title, imgData, className, children }: InfoCardProps) => {
   return (
     <CenterText
       className={

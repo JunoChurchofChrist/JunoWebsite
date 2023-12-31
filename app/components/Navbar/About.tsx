@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 import Dropdown from './Dropdown';
 
-interface Props {
+interface AboutProps {
   children?: ReactNode;
   classname?: string;
 }
 
-const About = ({ children, classname }: Props) => {
+const About = ({ children, classname }: AboutProps) => {
   return (
     <div
       className={
