@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="px-5 min-w-screen flex justify-around items-baseline bg-white">
+    <div className="px-5 min-w-screen flex justify-around items-baseline">
       <Link href="/">Juno Church of Christ</Link>
-      <div className="w-1/6 flex justify-around items-center bg-slate-800">
+      <div className="w-1/6 flex justify-around items-center">
         <Link href="/connect">Contact Us!</Link>
         <a
           href="https://www.facebook.com/JunoChurchOfChrist/?ref=br_rs"
