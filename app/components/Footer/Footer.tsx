@@ -5,7 +5,7 @@ import CenterText from '../CenterText';
 
 const Footer = () => {
   return (
-    <CenterText className="px-5 h-[5vh] min-w-screen">
+    <CenterText className="px-5 my-5 h-[5vh] min-w-screen">
       <div className="flex w-full justify-between items-baseline">
         <Link href="/">Juno Church of Christ</Link>
         <div className="w-1/6 flex justify-around items-center">
