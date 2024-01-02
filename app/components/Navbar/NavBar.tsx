@@ -31,7 +31,7 @@ const NavBar = () => {
     <header
       className={
         displayNavbarOnScroll
-          ? 'top-[-100px]' + navBarDefaultClasses
+          ? 'top-[-10vh]' + navBarDefaultClasses
           : 'top-0' + navBarDefaultClasses
       }
     >
