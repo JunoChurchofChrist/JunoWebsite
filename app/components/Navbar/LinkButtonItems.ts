@@ -1,7 +1,7 @@
 export const linkButtonItems = [
 {
   href:'/connect',
-  data:'Connect With Us'
+  data:'Connect'
 },
 {
   href:'/media',
