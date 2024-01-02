@@ -1,28 +1,29 @@
 import React from 'react';
+import CenterText from '@/app/components/CenterText';
 import Minister from './Minister';
-import dakota from '@/public/img/ministers/dakota.jpeg';
-import isaiah from '@/public/img/ministers/isaiah.jpeg';
+import { ministerCardItems } from './MinisterCardItems';
 
 const MinisterPage = () => {
   return (
     <>
-      <Minister imgData={dakota} title="Minister">
-        Dakota Jenkins is currently serving as the part-time minister. He is an
-        Freed-Hardeman University graduate with a major in Bible, minor in
-        Spanish, and another minor in Business. When he is not preaching at
-        Juno, he is running his electrician business, Jenkins Electric, or
-        studying to complete the masters degree he is currently pursuing from
-        FHU. He is married to Adrianna Jenkins and they enjoy and appreciate the
-        opportunity to work with the Juno congregation.
-      </Minister>
-      <div className="p-5"></div>
-      <Minister imgData={isaiah} title="Associate Minister">
-        Isaiah Leininger is currently serving as our youth minister. He is a
-        student at Freed-Hardeman University where he is double majoring in
-        Bible and Social Work. Originally from West Virginia, he is very
-        grateful for the opportunities he has been given to attend FHU and work
-        with the Juno congregation. His favorite verse is Romans 8:18
-      </Minister>
+      <CenterText className="flex-col">
+        <h1 className="p-3 text-3xl font-bold">OUR SERVANTS</h1>
+        <p className="p-3 text-xl max-w-[70%]">
+          Though all Christians are called to be ministers (2 Cor. 5:17-21), we
+          have a couple of men who regularly preach and teach here at the Juno
+          congregation. We hope you will come and join us for a worship service
+          or Bible study and meet them.
+        </p>
+      </CenterText>
+      {ministerCardItems.map((minister) => (
+        <Minister
+          imgData={minister.img}
+          title={minister.title}
+          name={minister.name}
+        >
+          {minister.data}
+        </Minister>
+      ))}
     </>
   );
 };
