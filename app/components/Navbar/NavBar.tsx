@@ -1,7 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import About from './About';
+import About from './NavBarcomponents/About';
+import LinkButton from '../LinkButton';
+import { linkButtonItems } from './LinkButtonItems';
 
 const NavBar = () => {
   const [displayNavBar, setDisplayNavBar] = useState(false);
@@ -36,12 +38,9 @@ const NavBar = () => {
       </Link>
       <div className="navbar-end mr-5">
         <About classname="mx-2 border rounded" />
-        <Link className="mx-2 p-2 border rounded" href="/connect">
-          Connect
-        </Link>
-        <Link className="mx-2 p-2 border rounded" href="/media">
-          Media
-        </Link>
+        {linkButtonItems.map((item) => (
+          <LinkButton href={item.href}>{item.data}</LinkButton>
+        ))}
       </div>
     </header>
   );
