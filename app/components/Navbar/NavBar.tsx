@@ -7,16 +7,16 @@ import { linkButtonItems } from './LinkButtonItems';
 import { aboutDropdownItems } from './AboutDropdownItems';
 
 const NavBar = () => {
-  const [displayNavBar, setDisplayNavBar] = useState(false);
+  const [displayNavbarOnScroll, setDisplayNavbarOnScroll] = useState(false);
   let prevScrollPosition = 0;
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition < prevScrollPosition && scrollPosition > 20) {
-      setDisplayNavBar(true);
+    if (scrollPosition > prevScrollPosition) {
+      setDisplayNavbarOnScroll(true);
     } else {
-      setDisplayNavBar(false);
+      setDisplayNavbarOnScroll(false);
     }
     prevScrollPosition = scrollPosition;
   };
@@ -25,13 +25,14 @@ const NavBar = () => {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
-  const navBarDefaultClasses = 'navbar transition-opacity';
+  const navBarDefaultClasses =
+    ' navbar top-0 fixed transition-all duration-300 min-h-[10vh]';
   return (
     <header
       className={
-        displayNavBar
-          ? 'fixed ' + navBarDefaultClasses
-          : 'min-h-[10vh] box-border ' + navBarDefaultClasses
+        displayNavbarOnScroll
+          ? 'top-[-100px]' + navBarDefaultClasses
+          : 'top-0' + navBarDefaultClasses
       }
     >
       <Link className="navbar-start ml-5 text-2xl" href="/">
