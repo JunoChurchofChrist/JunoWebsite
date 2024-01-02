@@ -1,9 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import About from './NavBarcomponents/About';
+import DropDownButton from './NavBarcomponents/DropdownButton';
 import LinkButton from '../LinkButton';
 import { linkButtonItems } from './LinkButtonItems';
+import { aboutDropdownItems } from './AboutDropdownItems';
 
 const NavBar = () => {
   const [displayNavBar, setDisplayNavBar] = useState(false);
@@ -37,7 +38,9 @@ const NavBar = () => {
         Juno Church of Christ
       </Link>
       <div className="navbar-end mr-5">
-        <About classname="mx-2 border rounded" />
+        <DropDownButton dropdownItems={aboutDropdownItems}>
+          About
+        </DropDownButton>
         {linkButtonItems.map((item) => (
           <LinkButton href={item.href}>{item.data}</LinkButton>
         ))}

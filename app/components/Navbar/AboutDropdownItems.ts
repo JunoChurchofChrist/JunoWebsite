@@ -1,11 +1,4 @@
-export interface aboutItemsInterface
-{
-    title:string;
-    href:string;
-
-}
-
-export const aboutItems = [
+export const aboutDropdownItems = [
 {
     title:'What to Expect',
     href:'/about/expectations'
