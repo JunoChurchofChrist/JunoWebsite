@@ -10,10 +10,11 @@ const MinisterPage = () => {
         Dakota Jenkins is currently serving as the part-time minister. He is an
         Freed-Hardeman University graduate with a major in Bible, minor in
         Spanish, and another minor in Business. When he is not preaching at
-        Juno, he is running his electrician business, Jenkins Electric, or
-        studying to complete the masters degree he is currently pursuing from
-        FHU. He is married to Adrianna Jenkins and they enjoy and appreciate the
-        opportunity to work with the Juno congregation.
+        Juno, he is running his electrician business, Jenkins Electric,
+        fathering his two children Sydney and Solomon, or studying to complete
+        the masters degree he is currently pursuing from FHU. He is married to
+        Adrianna Jenkins and they enjoy and appreciate the opportunity to work
+        with the Juno congregation.
       </Minister>
       <div className="p-5"></div>
       <Minister imgData={isaiah} title="Associate Minister">

@@ -1,12 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-import { aboutItems, aboutItemsInterface } from './aboutitems';
+import { DropdownItemsInterface } from './DropdownItemInterface';
 
-const Dropdown = () => {
+interface DropdownProps {
+  dropdownItems: Array<DropdownItemsInterface>;
+}
+
+const Dropdown = ({ dropdownItems }: DropdownProps) => {
   return (
     <div className="group hidden absolute group-hover:inline-block">
       <div className="my-2 min-w-fit border rounded z-auto">
-        {aboutItems.map((item: aboutItemsInterface) => (
+        {dropdownItems.map((item: DropdownItemsInterface) => (
           <Link className="block p-2 min-w-max z-auto" href={item.href}>
             {item.title}
           </Link>
