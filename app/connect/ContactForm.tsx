@@ -43,15 +43,16 @@ const ContactForm = ({ className }: ContactFormProps) => {
         <p className="text-lg">Contact us with your questions or inquiries</p>
       </CenterText>
       <div className="m-2 flex justify-between w-96">
-        <div>
+        <div className="mr-2">
           <label htmlFor="firstName" className="mb-1">
             First Name
           </label>
           <input
             {...register('firstName')}
             id="firstName"
-            className="rounded h-7"
+            className="rounded h-7 p-1"
             type="text"
+            placeholder="First"
           />
           {errors.firstName && (
             <p className="text-red-600">{errors.firstName.message}</p>
@@ -64,8 +65,9 @@ const ContactForm = ({ className }: ContactFormProps) => {
           <input
             {...register('lastName')}
             id="lastName"
-            className="rounded h-7"
+            className="rounded h-7 p-1"
             type="text"
+            placeholder="Last"
           />
           {errors.lastName && (
             <p className="text-red-600">{errors.lastName.message}</p>
@@ -79,20 +81,22 @@ const ContactForm = ({ className }: ContactFormProps) => {
         <input
           {...register('email')}
           id="email"
-          className="w-full rounded h-7"
+          className="w-full rounded h-7 p-1"
           type="text"
+          placeholder="example@email.com"
         />
         {errors.email && <p className="text-red-600">{errors.email.message}</p>}
       </div>
       <div className="m-2 w-96">
         <label htmlFor="comments" className="mb-1">
-          Comments
+          Comments/Questions
         </label>
-        <input
+        <textarea
           {...register('comments')}
           id="comments"
-          className="w-full h-40 rounded"
-          type="text"
+          className="w-full rounded resize-none p-1"
+          rows={6}
+          cols={50}
         />
         {errors.comments && (
           <p className="text-red-600">{errors.comments.message}</p>
