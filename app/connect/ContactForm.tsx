@@ -2,13 +2,32 @@
 import React from 'react';
 import CenterText from '../components/CenterText';
 import { FieldValues, useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 interface ContactFormProps {
   className?: string;
 }
 
+const schema = z.object({
+  firstName: z.string().min(1, { message: 'Must Have a First Name' }),
+  lastName: z.string().min(1, { message: 'Must Have a Last Name' }),
+  email: z.string().email(),
+  comments: z
+    .string()
+    .min(3, { message: 'Comments must be more than 3 characters' }),
+});
+
+type FormData = z.infer<typeof schema>;
+
 const ContactForm = ({ className }: ContactFormProps) => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
 
   const onSubmit = (data: FieldValues) => {
     console.log(data);
@@ -34,6 +53,9 @@ const ContactForm = ({ className }: ContactFormProps) => {
             className="rounded h-7"
             type="text"
           />
+          {errors.firstName && (
+            <p className="text-red-600">{errors.firstName.message}</p>
+          )}
         </div>
         <div>
           <label htmlFor="lastName" className="mb-1">
@@ -45,6 +67,9 @@ const ContactForm = ({ className }: ContactFormProps) => {
             className="rounded h-7"
             type="text"
           />
+          {errors.lastName && (
+            <p className="text-red-600">{errors.lastName.message}</p>
+          )}
         </div>
       </div>
       <div className="m-2 w-96">
@@ -57,6 +82,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
           className="w-full rounded h-7"
           type="text"
         />
+        {errors.email && <p className="text-red-600">{errors.email.message}</p>}
       </div>
       <div className="m-2 w-96">
         <label htmlFor="comments" className="mb-1">
@@ -68,6 +94,9 @@ const ContactForm = ({ className }: ContactFormProps) => {
           className="w-full h-40 rounded"
           type="text"
         />
+        {errors.comments && (
+          <p className="text-red-600">{errors.comments.message}</p>
+        )}
       </div>
       <button type="submit" className="btn btn-primary m-2">
         Submit
