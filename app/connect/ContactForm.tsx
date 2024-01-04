@@ -18,7 +18,7 @@ const schema = z.object({
     .min(3, { message: 'Comments must be more than 3 characters' }),
 });
 
-type FormData = z.infer<typeof schema>;
+export type FormData = z.infer<typeof schema>;
 
 const ContactForm = ({ className }: ContactFormProps) => {
   const {
@@ -29,8 +29,12 @@ const ContactForm = ({ className }: ContactFormProps) => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: FieldValues) => {
-    console.log(data);
+  const onSubmit = async (data: FieldValues) => {
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+    console.log(response);
   };
 
   return (

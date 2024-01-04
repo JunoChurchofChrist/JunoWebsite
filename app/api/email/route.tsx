@@ -1,14 +1,11 @@
 import { Resend } from 'resend';
-import dotenv from 'dotenv';
 import { NextResponse, NextRequest } from 'next/server';
 import ContactRecieved from '@/emails/ContactRecieved';
 import ContactMessage from '@/emails/ContactMessage';
 import { FormData } from '@/app/connect/ContactForm';
 
-const from = 'junochurch@gmail.com';
+const from = 'onboarding@resend.dev';
 const junoWorkEmail = 'evandvance@gmail.com';
-
-dotenv.config();
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
