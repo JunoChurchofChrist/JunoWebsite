@@ -1,6 +1,6 @@
 ## Juno Church Of Christ Website Redesign
 
-A redesign of the Juno Church of Christ's Website useing next.js
+A redesign of the Juno Church of Christ's Website using next.js
 
 ## Branch Naming Convention
 
