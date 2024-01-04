@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prev-email": "email dev -p 3030"
+    "prev-email": "email dev -p 4000"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.3",
