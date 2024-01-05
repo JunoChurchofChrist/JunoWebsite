@@ -1,22 +1,16 @@
 import React from 'react';
 import CenterText from '@/app/components/CenterText';
-import InfoCard from '@/app/components/InfoCard';
 import { elderCardItems } from './ElderCardItems';
+import InfoGrid from '@/app/components/InfoGrid';
 
 const LeadershipPage = () => {
   return (
     <>
       <CenterText>
         <p>Find a verse discribing the role of elders</p>
-        <h2 className="font-2xl text-bold">Our Elders</h2>
+        <h2 className="font-bold text-2xl">Our Elders</h2>
       </CenterText>
-      <CenterText className="flex-wrap">
-        {elderCardItems.map((card) => (
-          <InfoCard className="p-4" imgData={card.img} title={card.name}>
-            {card.contact}
-          </InfoCard>
-        ))}
-      </CenterText>
+      <InfoGrid cards={elderCardItems} />
     </>
   );
 };

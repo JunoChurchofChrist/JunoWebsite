@@ -1,7 +1,7 @@
 import React from 'react';
 import CenterText from '@/app/components/CenterText';
-import InfoCard from '../../components/InfoCard';
 import { expectationCardContent } from './ExpectationCardContent';
+import InfoGrid from '@/app/components/InfoGrid';
 
 const ExpectaionPage = () => {
   return (
@@ -16,13 +16,7 @@ const ExpectaionPage = () => {
         much like Jesus and follow the example of the church in the New
         Testament.
       </CenterText>
-      <CenterText className="flex-wrap">
-        {expectationCardContent.map((card) => (
-          <InfoCard className="p-4" imgData={card.img} title={card.title}>
-            {card.data}
-          </InfoCard>
-        ))}
-      </CenterText>
+      <InfoGrid cards={expectationCardContent} />
     </>
   );
 };
