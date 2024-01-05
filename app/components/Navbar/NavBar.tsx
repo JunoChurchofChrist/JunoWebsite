@@ -43,7 +43,9 @@ const NavBar = () => {
           About
         </DropDownButton>
         {linkButtonItems.map((item) => (
-          <LinkButton href={item.href}>{item.data}</LinkButton>
+          <LinkButton key={item.data} href={item.href}>
+            {item.data}
+          </LinkButton>
         ))}
       </div>
     </header>

@@ -4,11 +4,15 @@ export const aboutDropdownItems = [
     href:'/about/expectations'
 },
 {
+    title:'When/Where We Meet',
+    href:'/about/services'
+},
+{
     title:'Ministers',
     href:'/about/ministers'
 },
 {
-    title:'When/Where We Meet',
-    href:'/about/services'
+    title:'Leadership',
+    href:'/about/leadership'
 }
 ]
