@@ -6,11 +6,12 @@ import { InfoCardInterface } from './InfoCardItemInterface';
 interface InfoGridProps {
   cards: InfoCardInterface[];
   className?: string;
+  key?: string;
 }
 
-const InfoGrid = ({ cards, className }: InfoGridProps) => {
+const InfoGrid = ({ cards, className, key }: InfoGridProps) => {
   return (
-    <CenterText>
+    <CenterText key={key}>
       <CenterText className={'flex-wrap max-w-[72rem] ' + className}>
         {cards.map((card) => (
           <InfoCard className="p-4" card={card} />
