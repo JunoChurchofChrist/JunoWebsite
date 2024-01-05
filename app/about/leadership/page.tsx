@@ -6,9 +6,9 @@ import InfoGrid from '@/app/components/InfoGrid';
 const LeadershipPage = () => {
   return (
     <>
-      <CenterText>
-        <p>Find a verse discribing the role of elders</p>
-        <h2 className="font-bold text-2xl">Our Elders</h2>
+      <CenterText className="flex-col">
+        <p className="m-5">Find a verse discribing the role of elders</p>
+        <h2 className="font-bold text-2xl m-5">Our Elders</h2>
       </CenterText>
       <InfoGrid cards={elderCardItems} />
     </>
