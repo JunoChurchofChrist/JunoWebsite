@@ -13,6 +13,7 @@ interface InfoCardProps {
 const InfoCard = ({ title, imgData, className, children }: InfoCardProps) => {
   return (
     <CenterText
+      key={title}
       className={
         'flex-col h-[580px] w-96 border-t-2 justify-stretch ' + className
       }
