@@ -16,12 +16,14 @@ const ExpectaionPage = () => {
         much like Jesus and follow the example of the church in the New
         Testament.
       </CenterText>
-      <CenterText className="flex-wrap">
-        {InfoCardContent.map((card) => (
-          <InfoCard className="p-4" imgData={card.img} title={card.title}>
-            {card.data}
-          </InfoCard>
-        ))}
+      <CenterText>
+        <CenterText className="flex-wrap max-w-[72rem]">
+          {InfoCardContent.map((card) => (
+            <InfoCard className="p-4" imgData={card.img} title={card.title}>
+              {card.data}
+            </InfoCard>
+          ))}
+        </CenterText>
       </CenterText>
     </>
   );
