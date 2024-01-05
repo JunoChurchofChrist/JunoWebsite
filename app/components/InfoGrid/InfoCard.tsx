@@ -1,16 +1,17 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
 import CenterText from '@/app/components/CenterText';
-import { StaticImageData } from 'next/image';
+import { InfoCardInterface } from './InfoCardItemInterface';
 
 interface InfoCardProps {
-  title: string;
-  imgData: StaticImageData;
+  card: InfoCardInterface;
   className?: string;
-  children?: ReactNode;
 }
 
-const InfoCard = ({ title, imgData, className, children }: InfoCardProps) => {
+const InfoCard = ({
+  card: { title, data, imgData },
+  className,
+}: InfoCardProps) => {
   return (
     <CenterText
       key={title}
@@ -20,7 +21,7 @@ const InfoCard = ({ title, imgData, className, children }: InfoCardProps) => {
     >
       <Image className="my-2" src={imgData} alt={title} height={300}></Image>
       <h2 className="p-2 text-2xl font-bold">{title}</h2>
-      {children}
+      <p>{data}</p>
     </CenterText>
   );
 };
