@@ -14,6 +14,7 @@ const InfoCard = ({
 }: InfoCardProps) => {
   return (
     <CenterText
+      key={title}
       className={
         'flex-col h-[580px] w-96 border-t-2 justify-stretch ' + className
       }

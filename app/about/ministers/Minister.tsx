@@ -18,7 +18,10 @@ const Minister = ({
   name,
 }: MinisterProps) => {
   return (
-    <CenterText className={'flex-col m-5 text-2xl p-5 min-w-[80%]' + className}>
+    <CenterText
+      key={name}
+      className={'flex-col m-5 text-2xl p-5 min-w-[80%]' + className}
+    >
       <h2 className="font-bold my-2">{title}</h2>
       <h3 className="my-2">{name}</h3>
       <div className="flex m-5">
