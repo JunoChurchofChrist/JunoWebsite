@@ -1,7 +1,7 @@
 import React from 'react';
 import CenterText from '@/app/components/CenterText';
-import InfoCard from './InfoCard';
-import { InfoCardContent } from './InfoCardContent';
+import InfoCard from '../../components/InfoCard';
+import { expectationCardContent } from './ExpectationCardContent';
 
 const ExpectaionPage = () => {
   return (
@@ -17,7 +17,7 @@ const ExpectaionPage = () => {
         Testament.
       </CenterText>
       <CenterText className="flex-wrap">
-        {InfoCardContent.map((card) => (
+        {expectationCardContent.map((card) => (
           <InfoCard className="p-4" imgData={card.img} title={card.title}>
             {card.data}
           </InfoCard>

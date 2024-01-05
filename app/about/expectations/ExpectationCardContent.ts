@@ -5,7 +5,7 @@ import prayer from '@/public/img/expectationcard/prayer.jpeg'
 import communion from '@/public/img/expectationcard/communion.jpg'
 import offering from '@/public/img/expectationcard/offering.jpeg'
 
-export const InfoCardContent = [
+export const expectationCardContent = [
     {
         img:warmth,
         title:"Warmth",
