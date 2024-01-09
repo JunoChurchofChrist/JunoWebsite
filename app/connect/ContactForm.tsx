@@ -47,14 +47,14 @@ const ContactForm = ({ className }: ContactFormProps) => {
         <p className="text-lg">Contact us with your questions or inquiries</p>
       </CenterText>
       <div className="m-2 flex justify-between w-96">
-        <div className="mr-2">
+        <div className="max-w-[48%]">
           <label htmlFor="firstName" className="mb-1">
             First Name
           </label>
           <input
             {...register('firstName')}
             id="firstName"
-            className="rounded h-7 p-1"
+            className="rounded h-7 p-1 max-w-full"
             type="text"
             placeholder="First"
           />
@@ -62,14 +62,14 @@ const ContactForm = ({ className }: ContactFormProps) => {
             <p className="text-red-600">{errors.firstName.message}</p>
           )}
         </div>
-        <div>
+        <div className="max-w-[48%]" >
           <label htmlFor="lastName" className="mb-1">
             Last Name
           </label>
           <input
             {...register('lastName')}
             id="lastName"
-            className="rounded h-7 p-1"
+            className="rounded h-7 p-1 max-w-full"
             type="text"
             placeholder="Last"
           />
