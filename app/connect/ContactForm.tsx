@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { csrfToken } from 'next-auth/client'
 import CenterText from '../components/CenterText';
 import { FieldValues, useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -21,6 +22,7 @@ const schema = z.object({
 export type FormData = z.infer<typeof schema>;
 
 const ContactForm = ({ className }: ContactFormProps) => {
+  const token = csrfToken();
   const {
     register,
     handleSubmit,
