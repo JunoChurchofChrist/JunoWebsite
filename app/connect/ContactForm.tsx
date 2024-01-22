@@ -4,7 +4,6 @@ import CenterText from '../components/CenterText';
 import { FieldValues, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { getCsrfToken } from 'next-auth/react';
 
 interface ContactFormProps {
   className?: string;

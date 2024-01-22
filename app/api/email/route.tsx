@@ -11,10 +11,6 @@ const junoWorkEmail = 'evandvance@gmail.com';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
-  const domain = headers().get("host") || "";
-  if(!req.url.includes(domain)){ 
-      return NextResponse.json({message:"Request from Unauthorized sender"}, { status:401 })
-      };
   const data: FormData = await req.json();
   await resend.emails.send({
     from: from,
