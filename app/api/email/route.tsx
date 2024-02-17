@@ -4,8 +4,8 @@ import ContactRecieved from '@/emails/ContactRecieved';
 import ContactMessage from '@/emails/ContactMessage';
 import { FormData } from '@/app/connect/ContactForm';
 
-const from = 'onboarding@resend.dev';
-const junoWorkEmail = 'evandvance@gmail.com';
+const from = '';
+const junoWorkEmail = '';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
